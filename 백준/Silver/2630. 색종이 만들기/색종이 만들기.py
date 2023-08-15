@@ -6,6 +6,7 @@ result = []
 
 def findColor(x,y,n ):
     color = total[x][y];
+    # range 가 0이되면 종료된다..
     for i in range(x,x+n):
         for j in range(y, y+n):
             if(color != total[i][j]):
