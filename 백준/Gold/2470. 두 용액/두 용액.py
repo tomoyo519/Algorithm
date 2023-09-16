@@ -1,33 +1,30 @@
 import sys
 import math
-input = sys.stdin.readline
+input = sys.stdin.readline;
 
-num = int(input())
-arr = list(map(int, input().split()))
+N = int(input());
+potions = list(map(int, input().split() ))
 
-arr.sort();
-
-left , right = 0, num -1;
+# start ,end, middle, 종료조건
+# middle값을 우째야하노..
+potions.sort(); # [-99 -2 -1 4 98]
+start , end = 0, N -1 ; # 인덱스로 가야되나 ..
 result = math.inf
 resultArr = []
 
-#조건 다시 확인 가능
-while(left < right):
-    
-    sumsum = arr[left] + arr[right]
+while(start < end): # 0,4
+    sumsum = potions[start] + potions[end];
     if(abs(sumsum) < abs(result)):
         result = sumsum;
-        resultArr = [ arr[left], arr[right ] ]
-        
-    if(result ==0):
-        # 종료조건
+        resultArr = [potions[start], potions[end]];
+    if(result == 0):
         result = sumsum;
-        resultArr = [ arr[left], arr[right ] ]
+        resultArr = [potions[start], potions[end]];
         break;
-    
-    if(sumsum < 0):
-        left +=1;
-    else:
-        right -=1;
         
-print(resultArr[0], resultArr[1])
+    if(sumsum < 0):
+        start +=1;
+    else:
+        end-=1
+
+print(resultArr[0], resultArr[1]);       
