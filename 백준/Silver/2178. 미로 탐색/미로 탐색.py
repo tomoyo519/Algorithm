@@ -14,7 +14,6 @@ for i in range(width):
 dx = [-1, 1, 0 , 0]
 dy = [0, 0, -1, 1]
 
-# [[0],[1, 0, 1, 1, 1, 1], [1, 0, 1, 0, 1, 0], [1, 0, 1, 0, 1, 1], [1, 1, 1, 0, 1, 1]]
 
 def bfs(x,y):
     queue = deque()
@@ -32,5 +31,3 @@ def bfs(x,y):
     return maze[width-1][height-1]
 
 print(bfs(0,0))
-
-
