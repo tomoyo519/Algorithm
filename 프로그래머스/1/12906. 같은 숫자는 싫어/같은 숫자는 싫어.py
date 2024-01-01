@@ -9,7 +9,6 @@ def solution(arr):
     for i in range(1, len(arr)):
 
         if arr[i] == curr:
-            curr = arr[i]
             continue;
         else:
             curr = arr[i]
