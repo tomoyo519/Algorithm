@@ -9,6 +9,6 @@ def solution(brown, yellow):
 
     for i in range(len(check)):
         v = check[i]
-        h = int(total/v)
+        h = total//v
         if (v-2)*(h-2) == yellow:
             return [h, v]
