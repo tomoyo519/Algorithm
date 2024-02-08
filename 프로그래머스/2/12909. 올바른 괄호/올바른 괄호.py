@@ -11,7 +11,6 @@ def solution(s):
         else:
             stack.append(current)
 
-
     if len(stack) == 0:
         return True;
     else:
