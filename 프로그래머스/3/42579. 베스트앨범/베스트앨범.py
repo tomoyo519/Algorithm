@@ -8,7 +8,7 @@ def solution(genres, plays):
         else:
             hash[genres[i]] = [(plays[i], i)]
             hashN[genres[i]] = plays[i]
- 
+
     result = []
     rank = sorted(hashN, key = lambda x: hashN[x], reverse = True)
     for item in rank:
