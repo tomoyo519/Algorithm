@@ -1,12 +1,15 @@
-function solution(arr)
-{
-    let answer = [];
-    for(let i=0; i<arr.length; i++){
-        if(answer[answer.length-1] === arr[i]){
-            continue;
-        }else{
-            answer.push(arr[i])
+function solution(arr) {
+    if (arr.length === 0) return [];  
+
+    const result = [];  
+    let lastNum = null; 
+
+    for (let num of arr) {
+        if (num !== lastNum) { 
+            result.push(num);  
+            lastNum = num;    
         }
     }
-return answer
+
+    return result;
 }
