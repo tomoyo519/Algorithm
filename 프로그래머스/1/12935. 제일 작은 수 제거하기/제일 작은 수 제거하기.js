@@ -1,6 +1,10 @@
 function solution(arr) {
-    if(arr.length ===1) return [-1]
-    let minNum = Math.min(...arr)
-    let newArr = arr.filter((digit) => digit !== minNum)
-    return newArr;
+    let answer = [];
+    let minNum = Number.MAX_SAFE_INTEGER;
+    for(let i=0; i<arr.length; i++){
+        if (arr[i] < minNum) minNum = arr[i]
+    }
+    console.log(minNum)
+    const result = arr.filter((el)=> el !== minNum)
+    return result === [] ? [-1]: result;
 }
